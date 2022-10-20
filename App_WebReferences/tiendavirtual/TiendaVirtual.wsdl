@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://villanett.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://villanett.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://villanett.com/">
+      <s:element name="ObtenerCategorias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCategoriasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCategoriasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerGrupos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="categoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dimension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="division" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="grupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subgrupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerGruposResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerGruposResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEtiquetas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEtiquetasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerEtiquetasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerArticulosMultiple">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtrocategoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtroetiqueta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrodescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrodimension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrodivision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrogrupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrosubgrupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordenamiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="inicial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerArticulosMultipleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerArticulosMultipleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerArticulosCantidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filtrocategoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtroetiqueta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrodescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrodimension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrodivision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrogrupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filtrosubgrupo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerArticulosCantidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerArticulosCantidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPromocionesMultiple">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordenamiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="inicial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPromocionesMultipleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPromocionesMultipleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPromocionesCantidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPromocionesCantidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPromocionesCantidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerArticulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="articulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerArticuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerArticuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarCotizacionMultiple">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipopago" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlarticulos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientenombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clienteapellidos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clienteemail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientetelefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientecalle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientenumero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientecolonia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientecodigopostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientepais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clienteestado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientemunicipio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientecomentario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarCotizacionMultipleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarCotizacionMultipleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarFacturacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarFacturacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitarFacturacionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturarFolio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="razonsocial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="calle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroexterior" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numerointerior" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="colonia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="municipio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigopostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturarFolioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FacturarFolioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerCategoriasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCategorias" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCategoriasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerGruposSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerGrupos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerGruposSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerGruposResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEtiquetasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerEtiquetas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEtiquetasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerEtiquetasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerArticulosMultipleSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulosMultiple" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerArticulosMultipleSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulosMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerArticulosCantidadSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulosCantidad" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerArticulosCantidadSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulosCantidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPromocionesMultipleSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPromocionesMultiple" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPromocionesMultipleSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPromocionesMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPromocionesCantidadSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPromocionesCantidad" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPromocionesCantidadSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPromocionesCantidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerArticuloSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerArticuloSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarCotizacionMultipleSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarCotizacionMultiple" />
+  </wsdl:message>
+  <wsdl:message name="AgregarCotizacionMultipleSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarCotizacionMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarFacturacionSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitarFacturacion" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarFacturacionSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitarFacturacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturarFolioSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturarFolio" />
+  </wsdl:message>
+  <wsdl:message name="FacturarFolioSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturarFolioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TiendaVirtualSoap">
+    <wsdl:operation name="ObtenerCategorias">
+      <wsdl:input message="tns:ObtenerCategoriasSoapIn" />
+      <wsdl:output message="tns:ObtenerCategoriasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerGrupos">
+      <wsdl:input message="tns:ObtenerGruposSoapIn" />
+      <wsdl:output message="tns:ObtenerGruposSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEtiquetas">
+      <wsdl:input message="tns:ObtenerEtiquetasSoapIn" />
+      <wsdl:output message="tns:ObtenerEtiquetasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosMultiple">
+      <wsdl:input message="tns:ObtenerArticulosMultipleSoapIn" />
+      <wsdl:output message="tns:ObtenerArticulosMultipleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosCantidad">
+      <wsdl:input message="tns:ObtenerArticulosCantidadSoapIn" />
+      <wsdl:output message="tns:ObtenerArticulosCantidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromocionesMultiple">
+      <wsdl:input message="tns:ObtenerPromocionesMultipleSoapIn" />
+      <wsdl:output message="tns:ObtenerPromocionesMultipleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromocionesCantidad">
+      <wsdl:input message="tns:ObtenerPromocionesCantidadSoapIn" />
+      <wsdl:output message="tns:ObtenerPromocionesCantidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulo">
+      <wsdl:input message="tns:ObtenerArticuloSoapIn" />
+      <wsdl:output message="tns:ObtenerArticuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCotizacionMultiple">
+      <wsdl:input message="tns:AgregarCotizacionMultipleSoapIn" />
+      <wsdl:output message="tns:AgregarCotizacionMultipleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarFacturacion">
+      <wsdl:input message="tns:SolicitarFacturacionSoapIn" />
+      <wsdl:output message="tns:SolicitarFacturacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturarFolio">
+      <wsdl:input message="tns:FacturarFolioSoapIn" />
+      <wsdl:output message="tns:FacturarFolioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TiendaVirtualSoap" type="tns:TiendaVirtualSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerCategorias">
+      <soap:operation soapAction="http://villanett.com/ObtenerCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerGrupos">
+      <soap:operation soapAction="http://villanett.com/ObtenerGrupos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEtiquetas">
+      <soap:operation soapAction="http://villanett.com/ObtenerEtiquetas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosMultiple">
+      <soap:operation soapAction="http://villanett.com/ObtenerArticulosMultiple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosCantidad">
+      <soap:operation soapAction="http://villanett.com/ObtenerArticulosCantidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromocionesMultiple">
+      <soap:operation soapAction="http://villanett.com/ObtenerPromocionesMultiple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromocionesCantidad">
+      <soap:operation soapAction="http://villanett.com/ObtenerPromocionesCantidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulo">
+      <soap:operation soapAction="http://villanett.com/ObtenerArticulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCotizacionMultiple">
+      <soap:operation soapAction="http://villanett.com/AgregarCotizacionMultiple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarFacturacion">
+      <soap:operation soapAction="http://villanett.com/SolicitarFacturacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturarFolio">
+      <soap:operation soapAction="http://villanett.com/FacturarFolio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TiendaVirtualSoap12" type="tns:TiendaVirtualSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerCategorias">
+      <soap12:operation soapAction="http://villanett.com/ObtenerCategorias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerGrupos">
+      <soap12:operation soapAction="http://villanett.com/ObtenerGrupos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEtiquetas">
+      <soap12:operation soapAction="http://villanett.com/ObtenerEtiquetas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosMultiple">
+      <soap12:operation soapAction="http://villanett.com/ObtenerArticulosMultiple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosCantidad">
+      <soap12:operation soapAction="http://villanett.com/ObtenerArticulosCantidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromocionesMultiple">
+      <soap12:operation soapAction="http://villanett.com/ObtenerPromocionesMultiple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPromocionesCantidad">
+      <soap12:operation soapAction="http://villanett.com/ObtenerPromocionesCantidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulo">
+      <soap12:operation soapAction="http://villanett.com/ObtenerArticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCotizacionMultiple">
+      <soap12:operation soapAction="http://villanett.com/AgregarCotizacionMultiple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarFacturacion">
+      <soap12:operation soapAction="http://villanett.com/SolicitarFacturacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturarFolio">
+      <soap12:operation soapAction="http://villanett.com/FacturarFolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TiendaVirtual">
+    <wsdl:port name="TiendaVirtualSoap" binding="tns:TiendaVirtualSoap">
+      <soap:address location="http://tiendaws.villanett.com/TiendaVirtual.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TiendaVirtualSoap12" binding="tns:TiendaVirtualSoap12">
+      <soap12:address location="http://tiendaws.villanett.com/TiendaVirtual.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
